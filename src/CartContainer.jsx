@@ -2,7 +2,7 @@ import CartItem from "./CartItem";
 import { useGlobalContext } from "./context";
 import cartItems from "./data";
 const CartContainer = () => {
-  const { cart } = useGlobalContext();
+  const { cart,clearCart } = useGlobalContext();
 
   const cartArray = Array.from(cart.entries())
 
@@ -40,7 +40,7 @@ const CartContainer = () => {
         </div>
         <button
           className="btn btn-hipster"
-          onClick={() => console.log("clear cart")}
+          onClick={clearCart}
         >
           clear cart
         </button>
